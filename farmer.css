@@ -1,0 +1,1279 @@
+/* ======================================================
+   PASHU PARICHAY
+   FARMER DASHBOARD
+   farmer.css
+   ====================================================== */
+
+
+/* ======================================================
+   RESET
+   ====================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* ======================================================
+   BODY
+   ====================================================== */
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f5f7f5;
+    color: #1f2937;
+}
+
+
+button {
+    font-family: inherit;
+    cursor: pointer;
+}
+
+
+/* ======================================================
+   APP
+   ====================================================== */
+
+.app {
+    min-height: 100vh;
+    display: flex;
+}
+
+
+/* ======================================================
+   SIDEBAR
+   ====================================================== */
+
+.sidebar {
+    width: 250px;
+    min-height: 100vh;
+
+    background: #123c2a;
+    color: white;
+
+    padding: 25px 16px;
+
+    display: flex;
+    flex-direction: column;
+
+    position: fixed;
+    inset: 0 auto 0 0;
+}
+
+
+/* ======================================================
+   BRAND
+   ====================================================== */
+
+.brand {
+    display: flex;
+    align-items: center;
+
+    gap: 11px;
+
+    padding: 8px 10px 30px;
+}
+
+
+.brand-logo {
+    width: 45px;
+    height: 45px;
+
+    background: #f5c84c;
+
+    border-radius: 12px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 23px;
+}
+
+
+.brand h2 {
+    font-size: 16px;
+    margin-bottom: 3px;
+}
+
+
+.brand span {
+    font-size: 10px;
+    opacity: 0.65;
+}
+
+
+/* ======================================================
+   NAVIGATION
+   ====================================================== */
+
+.sidebar nav {
+    display: flex;
+    flex-direction: column;
+
+    gap: 6px;
+}
+
+
+.nav-item {
+    width: 100%;
+
+    border: none;
+    background: transparent;
+
+    color: #cbd9d0;
+
+    padding: 12px 13px;
+
+    border-radius: 10px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+
+    text-align: left;
+
+    font-size: 13px;
+}
+
+
+.nav-item:hover {
+    background: rgba(255, 255, 255, 0.08);
+    color: white;
+}
+
+
+.nav-item.active {
+    background: #f5c84c;
+    color: #173b29;
+    font-weight: 700;
+}
+
+
+.nav-item span {
+    width: 20px;
+    text-align: center;
+}
+
+
+.sidebar-bottom {
+    margin-top: auto;
+
+    padding-top: 20px;
+
+    border-top:
+        1px solid rgba(255, 255, 255, 0.1);
+}
+
+
+.logout {
+    color: #ffb4b4;
+}
+
+
+/* ======================================================
+   MAIN
+   ====================================================== */
+
+.main {
+    margin-left: 250px;
+
+    width:
+        calc(100% - 250px);
+
+    padding: 30px 40px;
+}
+
+
+/* ======================================================
+   TOP BAR
+   ====================================================== */
+
+.topbar {
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: 28px;
+}
+
+
+.small-title {
+    color: #7b867f;
+
+    font-size: 11px;
+
+    margin-bottom: 5px;
+}
+
+
+.topbar h1 {
+    font-size: 28px;
+}
+
+
+/* ======================================================
+   PROFILE
+   ====================================================== */
+
+.profile {
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+}
+
+
+.notification {
+    position: relative;
+
+    width: 38px;
+    height: 38px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: white;
+
+    border-radius: 10px;
+
+    box-shadow:
+        0 3px 12px rgba(0, 0, 0, 0.05);
+}
+
+
+.notification span {
+    position: absolute;
+
+    right: -2px;
+    top: -3px;
+
+    width: 16px;
+    height: 16px;
+
+    background: #e05252;
+
+    color: white;
+
+    border-radius: 50%;
+
+    font-size: 9px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.avatar {
+    width: 42px;
+    height: 42px;
+
+    background: #e8f2ea;
+
+    border-radius: 12px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 20px;
+}
+
+
+.profile-info strong {
+    display: block;
+
+    font-size: 13px;
+}
+
+
+.profile-info small {
+    display: block;
+
+    color: #89938d;
+
+    font-size: 10px;
+
+    margin-top: 3px;
+}
+
+
+/* ======================================================
+   WELCOME
+   ====================================================== */
+
+.welcome {
+    background: #1c633f;
+
+    color: white;
+
+    padding: 27px 30px;
+
+    border-radius: 17px;
+
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: 24px;
+}
+
+
+.welcome-badge {
+    display: inline-block;
+
+    padding: 5px 9px;
+
+    border-radius: 20px;
+
+    background:
+        rgba(255, 255, 255, 0.12);
+
+    font-size: 10px;
+
+    margin-bottom: 10px;
+}
+
+
+.welcome h2 {
+    font-size: 24px;
+
+    margin-bottom: 7px;
+}
+
+
+.welcome h2 span {
+    color: #f5c84c;
+}
+
+
+.welcome p {
+    font-size: 12px;
+
+    color: #d6e5dc;
+}
+
+
+.farmer-id-card {
+    background:
+        rgba(255, 255, 255, 0.1);
+
+    border:
+        1px solid rgba(255, 255, 255, 0.15);
+
+    border-radius: 10px;
+
+    padding: 12px 18px;
+
+    min-width: 145px;
+}
+
+
+.farmer-id-card small {
+    display: block;
+
+    color: #cbdcd1;
+
+    font-size: 9px;
+
+    margin-bottom: 5px;
+}
+
+
+.farmer-id-card strong {
+    font-size: 14px;
+
+    color: #f5c84c;
+}
+
+
+/* ======================================================
+   BASIC STATISTICS
+   ====================================================== */
+
+.stats-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 15px;
+
+    margin-bottom: 22px;
+}
+
+
+.stat-card {
+    background: white;
+
+    padding: 20px;
+
+    border-radius: 14px;
+
+    display: flex;
+
+    gap: 14px;
+
+    align-items: center;
+
+    box-shadow:
+        0 3px 15px rgba(30, 60, 40, 0.05);
+}
+
+
+.stat-icon {
+    width: 48px;
+    height: 48px;
+
+    border-radius: 12px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 22px;
+}
+
+
+.stat-icon.animals {
+    background: #fff5d9;
+}
+
+
+.stat-icon.cattle {
+    background: #e8f1ff;
+}
+
+
+.stat-icon.buffalo {
+    background: #f2eaff;
+}
+
+
+.stat-card p {
+    color: #858e88;
+
+    font-size: 10px;
+
+    margin-bottom: 5px;
+}
+
+
+.stat-card h2 {
+    font-size: 25px;
+
+    margin-bottom: 3px;
+}
+
+
+.stat-card span {
+    color: #7d8881;
+
+    font-size: 9px;
+}
+
+
+/* ======================================================
+   PANEL
+   ====================================================== */
+
+.panel {
+    background: white;
+
+    border-radius: 15px;
+
+    padding: 22px;
+
+    box-shadow:
+        0 3px 15px rgba(30, 60, 40, 0.05);
+
+    margin-bottom: 20px;
+}
+
+
+.panel-header {
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: 18px;
+}
+
+
+.panel-header h3 {
+    font-size: 15px;
+
+    margin-bottom: 5px;
+}
+
+
+.panel-header p {
+    color: #8a948e;
+
+    font-size: 10px;
+}
+
+
+.refresh-btn {
+    background: white;
+
+    border:
+        1px solid #d8e0da;
+
+    color: #1c633f;
+
+    padding: 8px 11px;
+
+    border-radius: 8px;
+
+    font-size: 10px;
+}
+
+
+.refresh-btn:hover {
+    background: #f4f8f5;
+}
+
+
+/* ======================================================
+   ANIMAL LIST
+   ====================================================== */
+
+.animal-list {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 15px;
+}
+
+
+.animal-card {
+    border:
+        1px solid #e7ebe8;
+
+    border-radius: 13px;
+
+    overflow: hidden;
+
+    background: #fff;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+
+.animal-card:hover {
+    transform:
+        translateY(-2px);
+
+    box-shadow:
+        0 7px 20px rgba(30, 60, 40, 0.08);
+}
+
+
+/* ======================================================
+   ANIMAL PHOTO
+   ====================================================== */
+
+.animal-photo {
+    height: 150px;
+
+    background: #edf3ee;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    overflow: hidden;
+}
+
+
+.animal-photo img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+}
+
+
+.animal-placeholder {
+    font-size: 48px;
+}
+
+
+/* ======================================================
+   ANIMAL INFO
+   ====================================================== */
+
+.animal-info {
+    padding: 14px;
+}
+
+
+.animal-info h4 {
+    font-size: 14px;
+
+    margin-bottom: 6px;
+}
+
+
+.animal-info p {
+    color: #7e8982;
+
+    font-size: 10px;
+
+    margin-bottom: 4px;
+}
+
+
+.breed-badge {
+    display: inline-block;
+
+    margin-top: 7px;
+
+    padding: 5px 8px;
+
+    border-radius: 20px;
+
+    background: #eaf4ee;
+
+    color: #1c633f;
+
+    font-size: 9px;
+
+    font-weight: 700;
+}
+
+
+/* ======================================================
+   EMPTY STATE
+   ====================================================== */
+
+.empty-state {
+    grid-column: 1 / -1;
+
+    text-align: center;
+
+    padding: 45px;
+
+    color: #929b95;
+}
+
+
+.empty-state div {
+    font-size: 45px;
+
+    margin-bottom: 10px;
+}
+
+
+.empty-state h4 {
+    color: #59635d;
+
+    font-size: 14px;
+
+    margin-bottom: 5px;
+}
+
+
+.empty-state p {
+    font-size: 10px;
+}
+
+
+/* ======================================================
+   HELP
+   ====================================================== */
+
+.help-section {
+    background: #fff;
+
+    border-radius: 15px;
+
+    padding: 22px;
+
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+
+    box-shadow:
+        0 3px 15px rgba(30, 60, 40, 0.05);
+}
+
+
+.help-content {
+    display: flex;
+
+    align-items: center;
+
+    gap: 14px;
+}
+
+
+.help-icon {
+    width: 48px;
+    height: 48px;
+
+    border-radius: 12px;
+
+    background: #fff1e8;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 22px;
+}
+
+
+.help-content h3 {
+    font-size: 14px;
+
+    margin-bottom: 5px;
+}
+
+
+.help-content p {
+    color: #858e88;
+
+    font-size: 10px;
+}
+
+
+.help-buttons {
+    display: flex;
+
+    gap: 8px;
+}
+
+
+.help-btn {
+    padding: 10px 13px;
+
+    border:
+        1px solid #dce3de;
+
+    background: white;
+
+    color: #1c633f;
+
+    border-radius: 8px;
+
+    font-size: 10px;
+
+    font-weight: 600;
+}
+
+
+.help-btn:hover {
+    background: #f4f8f5;
+}
+
+
+.help-btn.primary {
+    background: #1c633f;
+
+    color: white;
+
+    border-color: #1c633f;
+}
+
+
+.help-btn.primary:hover {
+    background: #154e32;
+}
+
+
+/* ======================================================
+   MODAL
+   ====================================================== */
+
+.modal {
+    position: fixed;
+
+    inset: 0;
+
+    background:
+        rgba(10, 30, 20, 0.55);
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    z-index: 100;
+}
+
+
+.modal.hidden {
+    display: none;
+}
+
+
+.modal-card {
+    width: 500px;
+
+    max-width:
+        calc(100% - 30px);
+
+    max-height: 90vh;
+
+    overflow-y: auto;
+
+    background: white;
+
+    border-radius: 18px;
+
+    padding: 28px;
+
+    position: relative;
+}
+
+
+/* ======================================================
+   CLOSE BUTTON
+   ====================================================== */
+
+.close-btn {
+    position: absolute;
+
+    right: 18px;
+    top: 15px;
+
+    width: 30px;
+    height: 30px;
+
+    border: none;
+
+    background: #f2f4f2;
+
+    border-radius: 50%;
+
+    font-size: 20px;
+
+    color: #555;
+}
+
+
+.close-btn:hover {
+    background: #e7ebe7;
+}
+
+
+/* ======================================================
+   MODAL ICON
+   ====================================================== */
+
+.modal-icon {
+    width: 48px;
+    height: 48px;
+
+    background: #eaf4ee;
+
+    border-radius: 12px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 23px;
+
+    margin-bottom: 14px;
+}
+
+
+.modal-card h2 {
+    font-size: 21px;
+
+    margin-bottom: 6px;
+}
+
+
+.modal-subtitle {
+    color: #858e88;
+
+    font-size: 11px;
+
+    margin-bottom: 20px;
+}
+
+
+/* ======================================================
+   HELP MODAL
+   ====================================================== */
+
+.help-modal label {
+    display: block;
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    margin-bottom: 7px;
+}
+
+
+.help-modal textarea {
+    width: 100%;
+
+    min-height: 130px;
+
+    resize: vertical;
+
+    border:
+        1px solid #dce2de;
+
+    border-radius: 9px;
+
+    padding: 12px;
+
+    outline: none;
+
+    font-family: inherit;
+
+    font-size: 12px;
+}
+
+
+.help-modal textarea:focus {
+    border-color: #1c633f;
+}
+
+
+.modal-submit {
+    width: 100%;
+
+    height: 45px;
+
+    margin-top: 18px;
+
+    border: none;
+
+    background: #1c633f;
+
+    color: white;
+
+    border-radius: 8px;
+
+    font-size: 12px;
+
+    font-weight: 700;
+}
+
+
+.modal-submit:hover {
+    background: #154e32;
+}
+
+
+/* ======================================================
+   ANIMAL DETAIL
+   ====================================================== */
+
+.detail-photo {
+    width: 100%;
+
+    height: 240px;
+
+    border-radius: 12px;
+
+    overflow: hidden;
+
+    background: #edf3ee;
+
+    margin-bottom: 18px;
+}
+
+
+.detail-photo img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+}
+
+
+.detail-placeholder {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    font-size: 70px;
+}
+
+
+/* ======================================================
+   DETAIL GRID
+   ====================================================== */
+
+.detail-grid {
+    display: grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    gap: 10px;
+
+    margin-top: 18px;
+}
+
+
+.detail-item {
+    background: #f6f8f6;
+
+    padding: 12px;
+
+    border-radius: 8px;
+}
+
+
+.detail-item small {
+    display: block;
+
+    color: #7f8a83;
+
+    font-size: 9px;
+
+    margin-bottom: 5px;
+}
+
+
+.detail-item strong {
+    font-size: 12px;
+
+    word-break: break-word;
+}
+
+
+/* ======================================================
+   RESPONSIVE
+   ====================================================== */
+
+@media (max-width: 1000px) {
+
+    .animal-list {
+        grid-template-columns:
+            1fr 1fr;
+    }
+
+
+    .stats-grid {
+        grid-template-columns:
+            1fr 1fr;
+    }
+
+}
+
+
+/* ======================================================
+   TABLET / SMALL SCREEN
+   ====================================================== */
+
+@media (max-width: 750px) {
+
+    .sidebar {
+        width: 70px;
+
+        padding: 20px 10px;
+    }
+
+
+    .brand {
+        justify-content: center;
+    }
+
+
+    .brand h2,
+    .brand span {
+        display: none;
+    }
+
+
+    .nav-item {
+        justify-content: center;
+
+        font-size: 0;
+    }
+
+
+    .nav-item span {
+        font-size: 18px;
+    }
+
+
+    .main {
+        margin-left: 70px;
+
+        width:
+            calc(100% - 70px);
+
+        padding: 20px;
+    }
+
+
+    .welcome {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 18px;
+    }
+
+
+    .help-section {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 18px;
+    }
+
+}
+
+
+/* ======================================================
+   MOBILE
+   ====================================================== */
+
+@media (max-width: 550px) {
+
+    .main {
+        padding: 14px;
+    }
+
+
+    .stats-grid,
+    .animal-list {
+        grid-template-columns: 1fr;
+    }
+
+
+    .profile-info {
+        display: none;
+    }
+
+
+    .help-buttons {
+        width: 100%;
+    }
+
+
+    .help-btn {
+        flex: 1;
+    }
+
+
+    .topbar {
+        align-items: flex-start;
+    }
+
+
+    .topbar h1 {
+        font-size: 22px;
+    }
+
+
+    .welcome {
+        padding: 22px;
+    }
+
+
+    .welcome h2 {
+        font-size: 21px;
+    }
+
+
+    .farmer-id-card {
+        width: 100%;
+    }
+
+
+    .modal-card {
+        padding: 22px;
+
+        max-width:
+            calc(100% - 20px);
+    }
+
+
+    .detail-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    .detail-photo {
+        height: 200px;
+    }
+
+}
+
+
+/* ======================================================
+   VERY SMALL MOBILE
+   ====================================================== */
+
+@media (max-width: 400px) {
+
+    .sidebar {
+        width: 60px;
+
+        padding:
+            15px 7px;
+    }
+
+
+    .main {
+        margin-left: 60px;
+
+        width:
+            calc(100% - 60px);
+
+        padding: 10px;
+    }
+
+
+    .brand-logo {
+        width: 38px;
+        height: 38px;
+
+        font-size: 19px;
+    }
+
+
+    .nav-item {
+        padding: 11px 5px;
+    }
+
+
+    .stat-card {
+        padding: 15px;
+    }
+
+
+    .panel {
+        padding: 15px;
+    }
+
+
+    .help-section {
+        padding: 16px;
+    }
+
+}

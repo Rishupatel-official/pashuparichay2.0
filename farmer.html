@@ -1,0 +1,713 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        Farmer Dashboard | Pashu Parichay
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="farmer.css"
+    >
+
+</head>
+
+
+<body>
+
+
+<div class="app">
+
+
+    <!-- ==================================================
+         SIDEBAR
+         ================================================== -->
+
+    <aside class="sidebar">
+
+
+        <!-- BRAND -->
+
+        <div class="brand">
+
+            <div class="brand-logo">
+                🐄
+            </div>
+
+
+            <div>
+
+                <h2>
+                    Pashu Parichay
+                </h2>
+
+                <span>
+                    Farmer Portal
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <!-- NAVIGATION -->
+
+        <nav>
+
+
+            <!-- DASHBOARD -->
+
+            <button
+                class="nav-item active"
+                type="button"
+                onclick="showDashboard()"
+            >
+
+                <span>
+                    📊
+                </span>
+
+                Dashboard
+
+            </button>
+
+
+            <!-- MY ANIMALS -->
+
+            <button
+                class="nav-item"
+                type="button"
+                onclick="showAnimals()"
+            >
+
+                <span>
+                    🐄
+                </span>
+
+                My Animals
+
+            </button>
+
+
+            <!-- MY PROFILE -->
+
+            <button
+                class="nav-item"
+                type="button"
+                onclick="showProfile()"
+            >
+
+                <span>
+                    👤
+                </span>
+
+                My Profile
+
+            </button>
+
+
+            <!-- HELP -->
+
+            <button
+                class="nav-item"
+                type="button"
+                onclick="showHelp()"
+            >
+
+                <span>
+                    🆘
+                </span>
+
+                Help & Support
+
+            </button>
+
+
+        </nav>
+
+
+        <!-- SIDEBAR BOTTOM -->
+
+        <div class="sidebar-bottom">
+
+
+            <!-- NOTIFICATIONS -->
+
+            <button
+                class="nav-item"
+                type="button"
+                onclick="showNotifications()"
+            >
+
+                <span>
+                    🔔
+                </span>
+
+                Notifications
+
+            </button>
+
+
+            <!-- LOGOUT -->
+
+            <button
+                class="nav-item logout"
+                type="button"
+                onclick="logout()"
+            >
+
+                <span>
+                    🚪
+                </span>
+
+                Logout
+
+            </button>
+
+
+        </div>
+
+
+    </aside>
+
+
+    <!-- ==================================================
+         MAIN
+         ================================================== -->
+
+    <main class="main">
+
+
+        <!-- ==================================================
+             TOP BAR
+             ================================================== -->
+
+        <header class="topbar">
+
+
+            <div>
+
+                <p class="small-title">
+                    Farmer Portal
+                </p>
+
+
+                <h1>
+                    My Dashboard
+                </h1>
+
+            </div>
+
+
+            <!-- PROFILE -->
+
+            <div class="profile">
+
+
+                <!-- NOTIFICATION -->
+
+                <div class="notification">
+
+                    🔔
+
+                    <span id="notificationCount">
+                        0
+                    </span>
+
+                </div>
+
+
+                <!-- AVATAR -->
+
+                <div class="avatar">
+                    👨‍🌾
+                </div>
+
+
+                <!-- FARMER INFO -->
+
+                <div class="profile-info">
+
+                    <strong id="farmerName">
+                        Farmer
+                    </strong>
+
+
+                    <small id="customerId">
+                        Customer ID
+                    </small>
+
+                </div>
+
+
+            </div>
+
+
+        </header>
+
+
+        <!-- ==================================================
+             WELCOME
+             ================================================== -->
+
+        <section class="welcome">
+
+
+            <div>
+
+
+                <span class="welcome-badge">
+                    🌾 Pashu Parichay
+                </span>
+
+
+                <h2>
+
+                    Welcome,
+
+                    <span id="welcomeName">
+                        Farmer
+                    </span>
+
+                    👋
+
+                </h2>
+
+
+                <p>
+
+                    Keep track of your livestock and
+                    access your animal records anytime.
+
+                </p>
+
+
+            </div>
+
+
+            <!-- CUSTOMER ID -->
+
+            <div class="farmer-id-card">
+
+
+                <small>
+                    Customer ID
+                </small>
+
+
+                <strong id="welcomeCustomerId">
+                    —
+                </strong>
+
+
+            </div>
+
+
+        </section>
+
+
+        <!-- ==================================================
+             BASIC STATISTICS
+             
+             NOTE:
+             These are only personal livestock counts.
+             
+             Advanced breed/state statistics have been
+             REMOVED from the Farmer portal and belong
+             ONLY to the Official portal.
+             ================================================== -->
+
+        <section class="stats-grid">
+
+
+            <!-- TOTAL ANIMALS -->
+
+            <div class="stat-card">
+
+
+                <div class="stat-icon animals">
+                    🐄
+                </div>
+
+
+                <div>
+
+                    <p>
+                        Total Animals
+                    </p>
+
+
+                    <h2 id="totalAnimals">
+                        0
+                    </h2>
+
+
+                    <span>
+                        Your registered livestock
+                    </span>
+
+                </div>
+
+
+            </div>
+
+
+            <!-- CATTLE -->
+
+            <div class="stat-card">
+
+
+                <div class="stat-icon cattle">
+                    🐂
+                </div>
+
+
+                <div>
+
+                    <p>
+                        Cattle
+                    </p>
+
+
+                    <h2 id="totalCattle">
+                        0
+                    </h2>
+
+
+                    <span>
+                        Your registered cattle
+                    </span>
+
+                </div>
+
+
+            </div>
+
+
+            <!-- BUFFALO -->
+
+            <div class="stat-card">
+
+
+                <div class="stat-icon buffalo">
+                    🐃
+                </div>
+
+
+                <div>
+
+                    <p>
+                        Buffalo
+                    </p>
+
+
+                    <h2 id="totalBuffalo">
+                        0
+                    </h2>
+
+
+                    <span>
+                        Your registered buffalo
+                    </span>
+
+                </div>
+
+
+            </div>
+
+
+        </section>
+
+
+        <!-- ==================================================
+             MY ANIMALS
+             ================================================== -->
+
+        <section class="panel">
+
+
+            <div class="panel-header">
+
+
+                <div>
+
+                    <h3>
+                        My Animals
+                    </h3>
+
+
+                    <p>
+                        Animals registered under your account
+                    </p>
+
+                </div>
+
+
+                <button
+                    class="refresh-btn"
+                    type="button"
+                    onclick="loadAnimals()"
+                >
+
+                    ↻ Refresh
+
+                </button>
+
+
+            </div>
+
+
+            <!-- ANIMAL LIST -->
+
+            <div
+                id="animalList"
+                class="animal-list"
+            >
+
+
+                <div class="empty-state">
+
+
+                    <div>
+                        🐄
+                    </div>
+
+
+                    <h4>
+                        No animals registered yet
+                    </h4>
+
+
+                    <p>
+
+                        Your registered cattle and buffalo
+                        will appear here.
+
+                    </p>
+
+
+                </div>
+
+
+            </div>
+
+
+        </section>
+
+
+        <!-- ==================================================
+             HELP
+             ================================================== -->
+
+        <section class="help-section">
+
+
+            <div class="help-content">
+
+
+                <div class="help-icon">
+                    🆘
+                </div>
+
+
+                <div>
+
+
+                    <h3>
+                        Need Help?
+                    </h3>
+
+
+                    <p>
+
+                        Contact an official if you need
+                        assistance with your livestock records.
+
+                    </p>
+
+
+                </div>
+
+
+            </div>
+
+
+            <!-- HELP BUTTONS -->
+
+            <div class="help-buttons">
+
+
+                <button
+                    type="button"
+                    onclick="sendMessage()"
+                    class="help-btn"
+                >
+
+                    💬 Send Message
+
+                </button>
+
+
+                <button
+                    type="button"
+                    onclick="requestCall()"
+                    class="help-btn primary"
+                >
+
+                    📞 Request a Call
+
+                </button>
+
+
+            </div>
+
+
+        </section>
+
+
+    </main>
+
+
+</div>
+
+
+<!-- ======================================================
+     ANIMAL DETAILS MODAL
+     ====================================================== -->
+
+<div
+    id="animalModal"
+    class="modal hidden"
+>
+
+
+    <div class="modal-card">
+
+
+        <!-- CLOSE -->
+
+        <button
+            class="close-btn"
+            type="button"
+            onclick="closeAnimalModal()"
+        >
+
+            ×
+
+        </button>
+
+
+        <!-- DETAILS -->
+
+        <div id="animalDetails"></div>
+
+
+    </div>
+
+
+</div>
+
+
+<!-- ======================================================
+     HELP MODAL
+     ====================================================== -->
+
+<div
+    id="helpModal"
+    class="modal hidden"
+>
+
+
+    <div class="modal-card help-modal">
+
+
+        <!-- CLOSE -->
+
+        <button
+            class="close-btn"
+            type="button"
+            onclick="closeHelpModal()"
+        >
+
+            ×
+
+        </button>
+
+
+        <!-- ICON -->
+
+        <div class="modal-icon">
+            🆘
+        </div>
+
+
+        <h2>
+            Help & Support
+        </h2>
+
+
+        <p class="modal-subtitle">
+
+            Send your question to an official.
+
+        </p>
+
+
+        <!-- FORM -->
+
+        <form id="helpForm">
+
+
+            <label for="helpMessage">
+                Your Message
+            </label>
+
+
+            <textarea
+                id="helpMessage"
+                placeholder="Describe your problem..."
+                required
+            ></textarea>
+
+
+            <button
+                type="submit"
+                class="modal-submit"
+            >
+
+                Send Message
+
+            </button>
+
+
+        </form>
+
+
+    </div>
+
+
+</div>
+
+
+<!-- ======================================================
+     JAVASCRIPT
+     ====================================================== -->
+
+<script
+    type="module"
+    src="farmer.js"
+></script>
+
+
+</body>
+
+</html>
