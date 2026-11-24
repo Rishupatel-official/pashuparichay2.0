@@ -38,29 +38,14 @@ import {
 /* ============================================================
    FIREBASE CONFIG
    ============================================================ */
-
 const firebaseConfig = {
-
-    apiKey:
-        "AIzaSyBBG6j2eXe2xocg7aV6Mp8VSEYIcxOT0bE",
-
-    authDomain:
-        "pashu-parichay-39f06.firebaseapp.com",
-
-    projectId:
-        "pashu-parichay-39f06",
-
-    storageBucket:
-        "pashu-parichay-39f06.firebasestorage.app",
-
-    messagingSenderId:
-        "593627877503",
-
-    appId:
-        "1:593627877503:web:afb0c734f9bb20df776f4a",
-
-    measurementId:
-        "G-M8L1T40F2F"
+  apiKey: "AIzaSyDTqrFtIRMqQcbrq5dwbtlHxaHrr5_NObw",
+  authDomain: "pashu-parichay-22c48.firebaseapp.com",
+  projectId: "pashu-parichay-22c48",
+  storageBucket: "pashu-parichay-22c48.firebasestorage.app",
+  messagingSenderId: "771547978662",
+  appId: "1:771547978662:web:98dac0983e2e3174d8cd67",
+  measurementId: "G-3B8W5QJ07L"
 };
 
 
